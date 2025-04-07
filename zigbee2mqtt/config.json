@@ -1,8 +1,8 @@
 {
-  "name": "Zigbee2MQTT",
+  "name": "Zigbee2MQTT 3",
   "version": "2.2.1-1",
-  "slug": "zigbee2mqtt",
-  "description": "Use your ZigBee devices without the vendor's bridge or gateway",
+  "slug": "zigbee2mqtt3",
+  "description": "Zigbee2MQTT 3. Instanz (SLZB-06 Adapter, w3.Keller",
   "breaking_versions": [
     "2.0.0-1"
   ],
@@ -42,11 +42,11 @@
     }
   ],
   "ports": {
-    "8485/tcp": 8485,
+    "8488/tcp": 8488,
     "8099/tcp": null
   },
   "ports_description": {
-    "8485/tcp": "Socat tcp-listen port",
+    "8488/tcp": "Socat tcp-listen port",
     "8099/tcp": "Frontend tcp-listen port"
   },
   "options": {
@@ -54,7 +54,7 @@
     "socat": {
       "enabled": false,
       "master": "pty,raw,echo=0,link=/tmp/ttyZ2M,mode=777",
-      "slave": "tcp-listen:8485,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
+      "slave": "tcp-listen:8488,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5",
       "options": "-d -d",
       "log": false
     },
